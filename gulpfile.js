@@ -30,7 +30,7 @@ gulp.task('jsConcat', function () {
         .pipe(gulp.dest('./build/js'));
 });
 
-gulp.task('build', ['jsConcat', 'cssConcat']);
+gulp.task('build', ['indexConcat','jsConcat', 'cssConcat']);
 gulp.task('watch', function () {
     gulp.watch('./src/css/*.css', ['cssConcat'])
     gulp.watch('./src/js/*.js', ['jsConcat'])
